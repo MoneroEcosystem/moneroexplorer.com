@@ -22,10 +22,10 @@ jobs:
         with:
           node-version: '16'  # Compatible with your packages
       
-      - name: 📦 Install dependencies
+      - name: 📦 Replace node-sass with sass in CI
         run: |
+          npm install --save-dev sass
           npm uninstall node-sass
-          npm install sass --save-dev
           npm install
 
       - name: 🔨 Build the app

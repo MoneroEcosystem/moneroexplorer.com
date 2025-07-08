@@ -27,7 +27,10 @@ const config = merge(common, {
             },
             {
               loader: 'sass-loader',
-              options: { sourceMap: true }
+              options: {
+                sourceMap: true,
+                implementation: require('sass')  // ✅ Dart Sass instead of node-sass
+              }
             }
           ]
         })
