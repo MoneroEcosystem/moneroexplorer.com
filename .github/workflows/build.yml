@@ -21,9 +21,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '16'  # Compatible with your packages
-
+      
       - name: 📦 Install dependencies
-        run: npm install
+        run: |
+          npm uninstall node-sass
+          npm install sass --save-dev
+          npm install
 
       - name: 🔨 Build the app
         run: npm run build
