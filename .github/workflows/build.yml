@@ -3,7 +3,8 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Or 'master' if that's your default branch
+      - main  # or 'master' if that's your default branch
+  workflow_dispatch:  # ✅ allows manual trigger from the GitHub UI
 
 permissions:
   contents: write
