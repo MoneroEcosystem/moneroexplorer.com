@@ -1,4 +1,4 @@
-@import 'src/sass/variables/index';
+@use 'src/sass/variables/index' as vars;
 
 .Tag {
   padding: 0.325rem 0.5rem;
@@ -11,7 +11,7 @@
   letter-spacing: 0.5px;
 
   &.pending:not(.skeleton) {
-    color: $blue-gray;
+    color: vars.$blue-gray;
     background-color: #fdfae6;
     border: 1px solid #ffe564;
   }

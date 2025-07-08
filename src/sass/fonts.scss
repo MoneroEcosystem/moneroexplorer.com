@@ -1,6 +1,6 @@
-@import './icons.scss';
-@import 'src/sass/mixins/index';
-@import 'src/sass/variables/index';
+@use './icons.scss';
+@use 'src/sass/mixins/index' as mixins;
+@use 'src/sass/variables/index' as vars;
 
 /* --------------------------------
 
@@ -24,7 +24,7 @@ $font-path: '../../assets/fonts';
 
 .nc-icon {
   display: inline-block;
-  font: normal normal normal $base-font-size / 1 'icons';
+  font: normal normal normal vars.$base-font-size / 1 'icons';
   font-size: inherit;
   text-transform: none;
   /* Better Font Rendering */
@@ -112,20 +112,20 @@ $font-path: '../../assets/fonts';
 -------------------------*/
 
 .nc-icon.rotate-90 {
-  @include nc-rotate(90deg, 1);
+  @include mixins.nc-rotate(90deg, 1);
 }
 
 .nc-icon.rotate-180 {
-  @include nc-rotate(180deg, 2);
+  @include mixins.nc-rotate(180deg, 2);
 }
 
 .nc-icon.rotate-270 {
-  @include nc-rotate(270deg, 3);
+  @include mixins.nc-rotate(270deg, 3);
 }
 
 .nc-icon.flip-y {
-  @include nc-flip(-1, 1, 0);
+  @include mixins.nc-flip(-1, 1, 0);
 }
 .nc-icon.flip-x {
-  @include nc-flip(1, -1, 2);
+  @include mixins.nc-flip(1, -1, 2);
 }

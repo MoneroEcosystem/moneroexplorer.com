@@ -7,7 +7,7 @@ const webpack = require('webpack');
 const paths = {
   root: path.join(__dirname, '../'),
   src: path.join(__dirname, '../src'),
-  output: path.join(__dirname, '../dist'),
+  path: path.resolve(__dirname, '../dist'),
   assets: path.join(__dirname, '../src/assets'),
   static: path.join(__dirname, '../public'),
   modules: path.join(__dirname, '../node_modules')

@@ -27,7 +27,7 @@ export class TxDetailsClass extends React.Component<Props, State> {
     data: { transaction: null, pending: false, confirmationDuration: null, txs: [] }
   };
 
-  public componentWillMount() {
+  public UNSAFE_componentWillMount() {
     this.setState({ data: { ...this.state.data, pending: true } });
     this.setConfirmationDuration();
     this.fetchTransaction();
@@ -90,9 +90,9 @@ export class TxDetailsClass extends React.Component<Props, State> {
       this.setState({ data: { ...this.state.data, pending: true } });
       fetchAsync(node.url + '/api/block/' + blockHeight)
         .then(json => {
-          const txs = json.data.txs.slice(0, 5);
-
-          this.setState({ data: { ...this.state.data, txs, pending: true } });
+          //const txs = json.data.txs.slice(0, 5);
+          console.log(json)
+          this.setState({ data: { ...this.state.data, pending: true } });
         })
         .catch(error => {
           console.log(error);
@@ -154,7 +154,7 @@ export class TxDetailsClass extends React.Component<Props, State> {
             </MetaTags>
             {!transaction.tx_hash && (
               <h1 className="Details-header-title">
-                Can't find transaction data for tx hash {this.props.match.params.transaction}
+                Can&rsquo;t find transaction data for tx hash {this.props.match.params.transaction}
               </h1>
             )}
             {transaction.tx_hash && (

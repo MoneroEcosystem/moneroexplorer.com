@@ -1,7 +1,7 @@
-@import 'src/sass/normalize';
-@import 'src/sass/fonts';
-@import 'src/sass/mixins/index';
-@import 'src/sass/variables/index';
+@use 'src/sass/normalize';
+@use 'src/sass/fonts';
+@use 'src/sass/mixins/index' as mixins;
+@use 'src/sass/variables/index' as vars;
 
 html {
   overflow: auto;
@@ -45,7 +45,7 @@ ul {
 }
 
 a {
-  color: $secondary-color;
+  color: vars.$secondary-color;
   text-decoration: none;
 }
 
@@ -67,10 +67,10 @@ span {
 }
 
 .card {
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
+  border: 1px solid vars.$border-color;
+  border-radius: vars.$border-radius;
   background-color: white;
-  box-shadow: $box-shadow;
+  box-shadow: vars.$box-shadow;
   width: 100%;
   padding: 1rem 2rem;
   overflow: hidden;
@@ -95,7 +95,7 @@ span {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: $secondary-color;
+  color: vars.$secondary-color;
 }
 
 .flex-spacer {
@@ -113,6 +113,6 @@ span {
 }
 
 .skeleton {
-  @include skeleton;
+  @include mixins.skeleton;
   animation: skeleton-pulse 1500ms ease-out infinite alternate-reverse;
 }

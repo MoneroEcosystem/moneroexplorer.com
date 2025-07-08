@@ -1,17 +1,17 @@
-@import 'src/sass/variables/index';
-@import 'src/sass/mixins/index';
+@use 'src/sass/variables/index' as vars;
+@use 'src/sass/mixins/index' as mixins;
 
 .Search {
-  @include input-reset;
-  background-color: lighten($Navigation-bg, 4%);
-  border-radius: $border-radius;
+  @include mixins.input-reset;
+  background-color: lighten(vars.$Navigation-bg, 4%);
+  border-radius: vars.$border-radius;
   color: white;
   font-size: 1rem;
   font-weight: 500;
   margin: 0 1rem;
   max-width: 768px;
   padding: 0.75rem 1rem;
-  transition: box-shadow $transition;
+  transition: box-shadow vars.$transition;
   width: 100%;
   @media screen and (max-width: 800px) {
     margin: 0;
@@ -22,6 +22,6 @@
     opacity: 1;
   }
   &:focus {
-    box-shadow: $box-shadow;
+    box-shadow: vars.$box-shadow;
   }
 }

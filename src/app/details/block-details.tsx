@@ -24,7 +24,7 @@ export class BlockDetailsClass extends React.Component<Props, State> {
     data: { block: null, pending: false }
   };
 
-  public componentWillMount() {
+  public UNSAFE_componentWillMount() {
     this.fetchBlock();
   }
 

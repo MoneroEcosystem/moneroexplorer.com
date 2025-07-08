@@ -1,7 +1,7 @@
-@import 'src/sass/variables/index';
+@use 'src/sass/variables/index' as vars;
 
 @mixin mono {
-	font-family: $font-family-monospace;
+	font-family: vars.$font-family-monospace;
 	font-weight: normal;
 	letter-spacing: 0.02em;
 }

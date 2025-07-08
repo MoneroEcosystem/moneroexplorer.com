@@ -36,7 +36,7 @@ class BlocksClass extends React.Component<Props, State> {
     page: 0
   };
 
-  public componentWillMount() {
+  public UNSAFE_componentWillMount() {
     if (this.props.location) {
       const queryStr = new URLSearchParams(this.props.location.search);
       const queries: any = {};

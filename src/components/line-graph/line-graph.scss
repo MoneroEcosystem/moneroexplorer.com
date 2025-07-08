@@ -1,4 +1,4 @@
-@import 'src/sass/variables/index';
+@use 'src/sass/variables/index' as vars;
 
 .linechart {
   position: relative;
@@ -9,7 +9,7 @@
   }
   &-path {
     stroke-width: 2;
-    stroke: $line-chart-color;
+    stroke: vars.$line-chart-color;
     fill: none;
     stroke-linejoin: round;
     stroke-linecap: round;
@@ -23,27 +23,27 @@
   &-area {
     padding: 0.5rem;
     stroke: none;
-    fill: $line-chart-color;
+    fill: vars.$line-chart-color;
     opacity: 0.75;
     opacity: 0.15;
   }
   &-line {
-    stroke: $line-chart-accent;
+    stroke: vars.$line-chart-accent;
     stroke-width: 2;
-    transition: opacity $transition;
+    transition: opacity vars.$transition;
     opacity: 0;
   }
   &-point {
     fill: white;
-    stroke: $line-chart-accent;
+    stroke: vars.$line-chart-accent;
     stroke-width: 2;
-    transition: opacity $transition;
+    transition: opacity vars.$transition;
     opacity: 0;
   }
   &-tooltip {
     position: absolute;
     text-align: center;
-    background-color: $line-chart-accent;
+    background-color: vars.$line-chart-accent;
     color: white;
     font-weight: 400;
     font-size: 0.875rem;
@@ -52,15 +52,15 @@
     padding: 0.25rem;
     margin: 0;
     opacity: 0;
-    transition: opacity $transition;
+    transition: opacity vars.$transition;
     padding: 0.25rem 0.5rem;
     &.top {
       top: 0;
     }
     &.bottom {
-      color: $line-chart-accent;
+      color: vars.$line-chart-accent;
       background-color: white;
-      border: 1px solid $line-chart-accent;
+      border: 1px solid vars.$line-chart-accent;
       bottom: 0rem;
     }
   }

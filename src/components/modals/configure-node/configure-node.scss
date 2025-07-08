@@ -1,6 +1,6 @@
-@import 'src/sass/variables/index';
+@use 'src/sass/variables/index' as vars;
 
 button.Modal-button.delete-node {
-  color: $secondary-color;
+  color: vars.$secondary-color;
   font-weight: 400;
 }

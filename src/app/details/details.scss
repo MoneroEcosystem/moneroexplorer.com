@@ -1,4 +1,4 @@
-@import 'src/sass/variables/index';
+@use 'src/sass/variables/index' as vars;
 
 .Details {
   div.skeleton,
@@ -18,11 +18,11 @@
     padding: 1rem 2rem;
     margin: -1rem -2rem;
     margin-bottom: 2rem;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid vars.$border-color;
     &-title {
       font-size: 1.25rem;
       font-weight: 500;
-      color: $text-color;
+      color: vars.$text-color;
       word-break: break-all;
     }
     &-timestamp {
@@ -30,7 +30,7 @@
       text-align: right;
       font-size: 1rem;
       font-weight: 400;
-      color: $blue-gray;
+      color: vars.$blue-gray;
       min-width: 120px;
     }
 
@@ -69,12 +69,12 @@
 
       &:not(:last-child) {
         margin-bottom: 2rem;
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid vars.$border-color;
       }
       &-title {
         font-size: 1rem;
         font-weight: 400;
-        color: $text-color;
+        color: vars.$text-color;
         width: 8rem;
         margin-right: 3rem;
 
@@ -109,11 +109,11 @@
             }
           }
           p {
-            color: $blue-gray;
+            color: vars.$blue-gray;
             font-weight: 400;
             font-size: 1.1rem;
             &:first-child {
-              color: $blue-gray-light;
+              color: vars.$blue-gray-light;
               font-size: 0.9rem;
             }
           }
@@ -128,10 +128,10 @@
         th {
           font-size: 1rem;
           font-weight: 400;
-          color: $text-color;
+          color: vars.$text-color;
           padding-bottom: 1rem;
           padding-left: 1rem;
-          border-bottom: 1px solid $border-color;
+          border-bottom: 1px solid vars.$border-color;
           text-align: right;
           &:first-child {
             text-align: left;
@@ -143,7 +143,7 @@
           font-size: 1rem;
           font-weight: 400;
           padding: 1rem 0rem;
-          color: $blue-gray;
+          color: vars.$blue-gray;
           text-align: right;
           white-space: nowrap;
           vertical-align: top;
@@ -157,7 +157,7 @@
           }
         }
         tr:not(:last-child) > td {
-          border-bottom: 1px solid $border-color;
+          border-bottom: 1px solid vars.$border-color;
         }
       }
     }

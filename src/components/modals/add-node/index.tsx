@@ -113,7 +113,7 @@ class AddNodeClass extends React.Component<Props, State> {
   };
 
   public setInputError = (input: 'name' | 'url', msg: string) => {
-    this.setState({ [(input + 'Error') as any]: msg });
+    this.setState({ [input]: msg } as any);
   };
 
   public render() {

@@ -1,5 +1,5 @@
-@import './buttons';
-@import 'src/sass/variables/index';
+@use './buttons';
+@use 'src/sass/variables/index';
 
 $table-cell-padding: 3rem;
 

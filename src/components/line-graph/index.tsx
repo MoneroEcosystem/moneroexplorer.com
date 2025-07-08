@@ -39,7 +39,7 @@ export class LineGraph extends React.Component<Props, State> {
     this.svg = (React as any).createRef();
   }
 
-  public componentWillUpdate(_: Props, prevState: State) {
+  public UNSAFE_componentWillUpdate(_: Props, prevState: State) {
     const prevPath = prevState.path;
     const newPath = this.state.path;
     const prevArea = this.state.area;

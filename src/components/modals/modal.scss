@@ -1,5 +1,5 @@
-@import 'src/sass/mixins/index';
-@import 'src/sass/variables/index';
+@use 'src/sass/mixins/index' as mixins;
+@use 'src/sass/variables/index' as vars;
 
 .Modal {
   display: flex;
@@ -9,8 +9,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
+  border: 1px solid vars.$border-color;
+  border-radius: vars.$border-radius;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 9px;
   background-color: #fff;
   min-width: 240px;
@@ -41,21 +41,21 @@
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid vars.$border-color;
     padding: 0.5rem 1.5rem !important;
     .nc-icon {
-      @include icon-button($text-color);
+      @include mixins.icon-button(vars.$text-color);
       font-size: 1.5rem;
       font-weight: 400;
     }
   }
   &-title {
-    color: $text-color;
+    color: vars.$text-color;
     font-size: 1.25rem;
     font-weight: 400;
   }
   &-close {
-    @include button-reset;
+    @include mixins.button-reset;
   }
   &-body {
     min-height: 96px;
@@ -71,7 +71,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     background-color: #f8f9fb;
-    border-radius: $border-radius;
+    border-radius: vars.$border-radius;
     padding: 1rem 1.5rem;
     font-size: 1rem;
     color: #777f96;
@@ -87,15 +87,15 @@
       margin-left: 1rem !important;
     }
     &.primary {
-      @include button($secondary-color);
-      @include button-primary;
+      @include mixins.button(vars.$secondary-color);
+      @include mixins.button-primary;
     }
     &.secondary {
-      @include button(#fff);
-      @include button-secondary;
+      @include mixins.button(#fff);
+      @include mixins.button-secondary;
     }
     &.warning {
-      @include button(#e06b56);
+      @include mixins.button(#e06b56);
     }
   }
 }
@@ -105,7 +105,7 @@
 }
 
 .ReactModalPortal .ReactModal__Overlay {
-  transition: opacity $transition;
+  transition: opacity vars.$transition;
   &--after-open {
     opacity: 1;
   }

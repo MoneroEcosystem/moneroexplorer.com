@@ -1,4 +1,4 @@
-@import 'src/sass/variables/index';
+@use 'src/sass/variables/index' as vars;
 
 @mixin button-reset {
   background: none;
@@ -14,14 +14,14 @@
   justify-content: center;
   font-weight: 500;
   padding: 0.5rem 1rem;
-  border-radius: $button-border-radius;
+  border-radius: vars.$button-border-radius;
   white-space: nowrap;
   color: white;
   background-color: $bg-color;
   .nc-icon {
     margin-left: 0.5rem;
   }
-  transition: background-color $transition;
+  transition: $bg-color vars.$transition;
   &:hover:not([disabled]) {
     cursor: pointer;
     background-color: lighten($bg-color, 4%);
@@ -32,7 +32,7 @@
 }
 
 @mixin button-primary {
-  box-shadow: $box-shadow;
+  box-shadow: vars.$box-shadow;
 }
 
 @mixin button-secondary {
@@ -52,13 +52,13 @@
   display: flex;
   padding: 0.5rem;
   border-radius: 50%;
-  transition: opacity $transition, background-color 150ms ease-out;
+  transition: opacity vars.$transition, background-color 150ms ease-out;
   opacity: 0.4;
   &:hover:not([disabled]) {
     opacity: 1 !important;
     cursor: pointer;
   }
   &:active {
-    background-color: $hover-color;
+    background-color: vars.$hover-color;
   }
 }

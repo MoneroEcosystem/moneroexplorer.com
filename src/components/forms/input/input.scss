@@ -1,62 +1,70 @@
-@import 'src/sass/variables/index';
+@use 'src/sass/variables/index' as vars;
 
 .Input {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+
   &:not(:last-child) {
     margin-bottom: 0.5rem;
   }
+
   &-label-wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
   }
+
   &-label {
     font-size: 1rem;
     font-weight: 400;
-    color: $text-color;
+    color: vars.$text-color;
     margin: 0.5rem 0;
   }
+
   &-inline-label {
     font-size: 0.875rem;
     font-weight: 400;
-    color: $blue-gray-light;
+    color: vars.$blue-gray-light;
     margin-left: 1rem;
   }
+
   &-input {
     font-size: 1rem;
     font-weight: 400;
-    color: $text-color;
+    color: vars.$text-color;
     padding: 1rem 1.5rem;
-    border-radius: $border-radius;
-    border: 1px solid $border-dark-color;
+    border-radius: vars.$border-radius;
+    border: 1px solid vars.$border-dark-color;
     box-shadow: inset 0 1px 0 0 rgba(63, 63, 68, 0.05);
-    transition: border-color $transition, box-shadow $transition;
+    transition: border-color vars.$transition, box-shadow vars.$transition;
+
     &.pending {
-      border-color: $warning-color !important;
-      box-shadow: inset 0 0 0 1px $warning-color !important;
+      border-color: vars.$warning-color !important;
+      box-shadow: inset 0 0 0 1px vars.$warning-color !important;
     }
+
     &:focus {
-      border-color: $secondary-color;
-      box-shadow: inset 0 0 0 1px $secondary-color;
+      border-color: vars.$secondary-color;
+      box-shadow: inset 0 0 0 1px vars.$secondary-color;
     }
+
     &::placeholder {
-      color: $blue-gray-light;
+      color: vars.$blue-gray-light;
     }
   }
 
   &-error {
-    color: $error-color;
+    color: vars.$error-color;
     font-size: 1rem;
     margin-top: 0.5rem;
   }
 
   &.error {
     .Input-input {
-      border-color: $error-color;
-      box-shadow: inset 0 0 0 1px $error-color;
+      border-color: vars.$error-color;
+      box-shadow: inset 0 0 0 1px vars.$error-color;
     }
   }
 }

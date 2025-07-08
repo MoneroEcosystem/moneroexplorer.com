@@ -1,10 +1,10 @@
-@import 'src/sass/mixins/index';
-@import 'src/sass/variables/index';
+@use 'src/sass/mixins/index' as mixins;
+@use 'src/sass/variables/index' as vars;
 
 .Select-node {
   position: relative;
   &-button {
-    @include button(lighten($Navigation-bg, 4%));
+    @include mixins.button(lighten(vars.$Navigation-bg, 4%));
     color: white;
   }
   &-wrapper {
@@ -18,18 +18,18 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    border: 1px solid $border-color;
+    border: 1px solid vars.$border-color;
     min-width: 225px;
     right: 0;
-    border-radius: $border-radius;
-    box-shadow: $box-shadow;
+    border-radius: vars.$border-radius;
+    box-shadow: vars.$box-shadow;
 
-    @include RTG-fade;
+    @include mixins.RTG-fade;
   }
   &-nodes {
     font-size: 1rem;
     font-weight: 400;
-    color: $text-color;
+    color: vars.$text-color;
     text-align: right;
     margin: 1rem 0;
   }
@@ -42,9 +42,9 @@
     cursor: pointer;
     padding: 0.5rem 1.5rem;
     height: 3rem;
-    transition: background-color $transition;
+    transition: background-color vars.$transition;
     button.settings {
-      @include icon-button($text-color);
+      @include mixins.icon-button(vars.$text-color);
       margin-left: -0.5rem;
       opacity: 0;
       @media screen and (max-width: 800px) {
@@ -67,27 +67,27 @@
       left: 0;
       width: 4px;
       height: 100%;
-      transition: background-color $transition;
+      transition: background-color vars.$transition;
       background-color: transparent;
     }
     &.selected {
-      background-color: $hover-color;
+      background-color: vars.$hover-color;
       > .selected-marker {
-        background-color: $secondary-color;
+        background-color: vars.$secondary-color;
       }
       button.settings {
         opacity: 0.6;
       }
     }
     &:hover {
-      background-color: $hover-color;
+      background-color: vars.$hover-color;
       &:not(.selected) button.settings {
         opacity: 0.3;
       }
     }
   }
   &-add {
-    @include button($secondary-color);
+    @include mixins.button(vars.$secondary-color);
     margin: 1rem;
     margin-top: 0;
   }

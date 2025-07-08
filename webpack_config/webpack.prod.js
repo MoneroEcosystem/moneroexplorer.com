@@ -1,4 +1,4 @@
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -8,6 +8,10 @@ const webpack = require('webpack');
 const path = require('path');
 
 const config = merge(common, {
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()]
+  },
   output: {
     publicPath: '/'
   },
@@ -29,7 +33,7 @@ const config = merge(common, {
               loader: 'sass-loader',
               options: {
                 sourceMap: true,
-                implementation: require('sass')  // ✅ Dart Sass instead of node-sass
+                implementation: require('sass')
               }
             }
           ]
@@ -38,7 +42,6 @@ const config = merge(common, {
     ]
   },
   plugins: [
-    new UglifyJSPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': 'production'
     }),

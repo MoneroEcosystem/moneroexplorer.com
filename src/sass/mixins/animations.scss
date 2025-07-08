@@ -1,4 +1,4 @@
-@import 'src/sass/variables/index';
+@use 'src/sass/variables/index' as vars;
 
 @mixin RTG-fade {
   &-animation-enter {
@@ -6,7 +6,7 @@
   }
   &-animation-enter-active {
     opacity: 1;
-    transition: opacity $transition;
+    transition: opacity vars.$transition;
   }
 
   &-animation-exit {
@@ -14,7 +14,7 @@
   }
   &-animation-exit-active {
     opacity: 0.01;
-    transition: opacity $transition;
+    transition: opacity vars.$transition;
   }
 }
 
@@ -26,7 +26,7 @@
   &-animation-enter-active {
     opacity: 1;
     transform: translateX(0);
-    transition: opacity $transition, transform 250ms;
+    transition: opacity vars.$transition, transform 250ms;
   }
 
   &-animation-exit {
@@ -36,7 +36,7 @@
   &-animation-exit-active {
     opacity: 0.01;
     transform: translateX(-200px);
-    transition: opacity $transition, transform 250ms;
+    transition: opacity vars.$transition, transform 250ms;
   }
 }
 
@@ -48,7 +48,7 @@
   &-animation-enter-active {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity $transition, transform 500ms ease;
+    transition: opacity vars.$transition, transform 500ms ease;
   }
 
   &-animation-exit {
@@ -56,6 +56,6 @@
   }
   &-animation-exit-active {
     opacity: 0.01;
-    transition: opacity $transition;
+    transition: opacity vars.$transition;
   }
 }

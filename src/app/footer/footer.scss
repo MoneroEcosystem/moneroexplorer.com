@@ -1,8 +1,8 @@
-@import 'src/sass/variables/index';
+@use 'src/sass/variables/index' as vars;
 
 .Footer {
   display: block;
-  background-color: $footer-color;
+  background-color: vars.$footer-color;
   width: 100%;
   background-size: 5rem;
   color: white;
@@ -107,6 +107,6 @@
     color: white;
   }
   a {
-    transition: opacity $transition;
+    transition: opacity vars.$transition;
   }
 }

@@ -1,5 +1,5 @@
-@import 'src/sass/mixins/index';
-@import 'src/sass/variables/index';
+@use 'src/sass/mixins/index' as mixins;
+@use 'src/sass/variables/index' as vars;
 
 .Notification {
   &-wrapper {
@@ -20,12 +20,12 @@
     }
   }
 
-  @include RTG-notification;
+  @include mixins.RTG-notification;
   color: white;
   background-color: #3f4350;
   padding: 1rem 1.5rem;
   border-radius: 6px;
-  box-shadow: $box-shadow;
+  box-shadow: vars.$box-shadow;
   margin-top: 1rem;
   z-index: 1;
 
@@ -36,7 +36,7 @@
     background-color: transparent;
     border-radius: 3px;
     &.Error {
-      background-color: $error-color;
+      background-color: vars.$error-color;
     }
   }
 }

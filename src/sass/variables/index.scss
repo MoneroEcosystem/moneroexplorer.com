@@ -1,5 +1,5 @@
-@import './colors';
-@import './typography';
+@forward 'colors';
+@forward 'typography';
 
 $transition: 200ms ease;
 

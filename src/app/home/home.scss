@@ -1,5 +1,5 @@
-@import 'src/sass/variables/index';
-@import 'src/sass/mixins/index';
+@use 'src/sass/variables/index' as vars;
+@use 'src/sass/mixins/index' as mixins;
 
 .New-User-CTA {
   display: flex;
@@ -16,13 +16,13 @@
   &-title {
     font-size: 2rem;
     font-weight: 400;
-    color: $text-color;
+    color: vars.$text-color;
     white-space: nowrap;
     margin-bottom: 0.5rem;
   }
   &-text {
     font-size: 1rem;
-    color: $blue-gray-light;
+    color: vars.$blue-gray-light;
     margin-bottom: 1rem;
     line-height: 1.75;
   }
@@ -31,7 +31,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     padding-top: 1rem;
-    border-top: 1px solid $border-color;
+    border-top: 1px solid vars.$border-color;
   }
   &-link {
     display: block;
@@ -41,8 +41,8 @@
   }
   &-graph {
     margin: 0.5rem 0;
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
+    border: 1px solid vars.$border-color;
+    border-radius: vars.$border-radius;
     height: inherit;
     width: 133%;
   }

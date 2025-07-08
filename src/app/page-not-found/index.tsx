@@ -6,7 +6,7 @@ export const PageNotFound = () => {
     <div className="Page-Not-Found card">
       <h1 className="Page-Not-Found-title">Page not found</h1>
       <p className="Page-Not-Found-description">
-        The page your looking for couldn't be found. Try the <a href="/">home page</a>
+        The page your looking for couldn&rsquo;t be found. Try the <a href="/">home page</a>
       </p>
     </div>
   );

@@ -1,5 +1,5 @@
-@import 'src/sass/mixins/index';
-@import 'src/sass/variables/index';
+@use 'src/sass/mixins/index' as mixins;
+@use 'src/sass/variables/index' as vars;
 
 $table-cell-padding: 3rem;
 
@@ -31,17 +31,17 @@ $table-cell-padding: 3rem;
   &-title {
     font-size: 1.25rem;
     font-weight: 500;
-    color: $text-color;
+    color: vars.$text-color;
     margin-right: 0.5rem;
   }
   &-view-all {
-    @include button($btn-background);
-    @include button-primary;
+    @include mixins.button(vars.$btn-background);
+    @include mixins.button-primary;
     margin-left: 1rem;
     line-height: 1.15;
   }
   &-refresh {
-    @include icon-button($text-color);
+    @include mixins.icon-button(vars.$text-color);
     font-size: 1.5rem;
     margin-left: 1rem;
     line-height: 1.15;
@@ -55,8 +55,8 @@ $table-cell-padding: 3rem;
         padding: 1rem 0;
         font-size: 1rem;
         font-weight: 400;
-        color: $text-color;
-        border-bottom: 1px solid $border-color;
+        color: vars.$text-color;
+        border-bottom: 1px solid vars.$border-color;
         white-space: nowrap;
         text-align: left;
         &:not(:first-child) {
@@ -69,11 +69,11 @@ $table-cell-padding: 3rem;
       > tr {
         &:not(:last-child) {
           > td {
-            border-bottom: 1px solid $border-color;
+            border-bottom: 1px solid vars.$border-color;
           }
         }
         > td {
-          color: $blue-gray-light;
+          color: vars.$blue-gray-light;
           padding: 1rem 0;
           box-sizing: content-box;
           white-space: nowrap;
@@ -93,11 +93,11 @@ $table-cell-padding: 3rem;
       margin: -1rem -2rem;
       margin-top: 0;
       padding: 0.5rem 2rem;
-      border-top: 1px solid $border-color;
+      border-top: 1px solid vars.$border-color;
       color: #999999;
       align-items: center;
       &-paginate {
-        @include icon-button(#999999);
+        @include mixins.icon-button(#999999);
         font-size: 1.5rem;
         line-height: 1.15;
       }

@@ -1,19 +1,19 @@
-@import 'src/sass/mixins/index';
-@import 'src/sass/variables/index';
+@use 'src/sass/mixins/index' as mixins;
+@use 'src/sass/variables/index'as vars;
 
 .Navigation {
-  background-color: $Navigation-bg;
+  background-color: vars.$Navigation-bg;
   width: 100%;
   padding: 0.75rem 2rem;
   @media screen and (max-width: 800px) {
     padding: 0.75rem 1rem;
     margin-top: 0;
   }
-  box-shadow: $box-shadow;
+  box-shadow: vars.$box-shadow;
   font-size: 1rem;
   z-index: 1;
   &-Drawer {
-    @include RTG-side-drawer;
+    @include mixins.RTG-side-drawer;
     &-wrapper {
       position: fixed;
       top: 0;
@@ -54,7 +54,7 @@
 
     &-header {
       display: flex;
-      background-color: $Navigation-bg;
+      background-color: vars.$Navigation-bg;
       padding: 0.75rem 1rem;
       justify-content: center;
       border-bottom: 1px solid transparent;
@@ -90,7 +90,7 @@
 
   &-open-drawer {
     display: none;
-    @include button-reset;
+    @include mixins.button-reset;
     color: white;
     padding: 0.5rem;
     font-size: 1.5rem;

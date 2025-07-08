@@ -11,7 +11,7 @@ export class Home extends React.Component {
     height: 100
   };
 
-  public componentWillMount() {
+  public UNSAFE_componentWillMount() {
     this.updateDimensions();
     window.addEventListener('resize', this.updateDimensions);
   }
@@ -178,7 +178,7 @@ export class Home extends React.Component {
             a public distributed ledger and all transactions conducted are anonymous.
           </p>
           <p>
-            A block's transaction count is calculated by taking the median of the past 100 blocks
+            A block&rsquo;s transaction count is calculated by taking the median of the past 100 blocks
             and multiplying it by two.
           </p>
           <p>
