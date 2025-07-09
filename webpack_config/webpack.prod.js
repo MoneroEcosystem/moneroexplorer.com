@@ -9,8 +9,7 @@ const path = require('path');
 
 const config = merge(common, {
   optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin()]
+    minimize: false, // ← disables both Terser and UglifyJs
   },
   output: {
     publicPath: '/'

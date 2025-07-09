@@ -57,7 +57,7 @@ export class BlockDetailsClass extends React.Component<Props, State> {
           <>
             <MetaTags>
               <link rel="canonical" href={`https://xmrscan.org/block/${block.block_height}`} />
-              <title>Monero (XMR) Block {block.block_height} — XMRScan Explorer</title>
+              <title>Monero (XMR) Block {block.block_height} — Monero Explorer Explorer</title>
               <meta
                 name="description"
                 content={`Monero (XMR) block ${block.block_height}, hash: ${block.hash}`}
@@ -65,7 +65,7 @@ export class BlockDetailsClass extends React.Component<Props, State> {
               <meta property="og:title" content={`Monero (XMR) block ${block.block_height}`} />
               <meta
                 name="og:title"
-                content={`Monero (XMR) block ${block.block_height} | XMRScan`}
+                content={`Monero (XMR) block ${block.block_height} | Monero Explorer`}
               />
               <meta
                 name="og:description"
@@ -79,10 +79,10 @@ export class BlockDetailsClass extends React.Component<Props, State> {
               />
               <meta
                 name="twitter:title"
-                content={`Monero (XMR) block ${block.block_height} | XMRScan`}
+                content={`Monero (XMR) block ${block.block_height} | Monero Explorer`}
               />
-              <meta name="application-name" content="XMRScan" />
-              <meta name="apple-mobile-web-app-title" content="XMRScan" />
+              <meta name="application-name" content="Monero Explorer" />
+              <meta name="apple-mobile-web-app-title" content="Monero Explorer" />
             </MetaTags>
             <div className="Details-header">
               <div className="Details-header-title-wrapper">

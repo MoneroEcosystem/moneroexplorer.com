@@ -111,12 +111,12 @@ export class TxDetailsClass extends React.Component<Props, State> {
             <MetaTags>
               <title>
                 Monero (XMR) Transaction{' '}
-                {transaction.tx_hash || this.props.match.params.transaction} — XMRScan Explorer
+                {transaction.tx_hash || this.props.match.params.transaction} — Monero Explorer Explorer
               </title>
               <meta
                 name="description"
                 content={`Monero (XMR) transaction ${transaction.tx_hash ||
-                  this.props.match.params.transaction} - XMRScan`}
+                  this.props.match.params.transaction} - Monero Explorer`}
               />
               <meta
                 property="og:title"
@@ -126,12 +126,12 @@ export class TxDetailsClass extends React.Component<Props, State> {
               <meta
                 name="og:title"
                 content={`Monero Transaction ${transaction.tx_hash ||
-                  this.props.match.params.transaction} | XMRScan`}
+                  this.props.match.params.transaction} | Monero Explorer`}
               />
               <meta
                 name="og:description"
                 content={`Monero (XMR) transaction ${transaction.tx_hash ||
-                  this.props.match.params.transaction} - XMRScan`}
+                  this.props.match.params.transaction} - Monero Explorer`}
               />
               <meta
                 property="og:url"
@@ -142,15 +142,15 @@ export class TxDetailsClass extends React.Component<Props, State> {
               <meta
                 name="twitter:description"
                 content={`Monero (XMR) transaction ${transaction.tx_hash ||
-                  this.props.match.params.transaction} - XMRScan`}
+                  this.props.match.params.transaction} - Monero Explorer`}
               />
               <meta
                 name="twitter:title"
                 content={`Monero Transaction ${transaction.tx_hash ||
-                  this.props.match.params.transaction} | XMRScan`}
+                  this.props.match.params.transaction} | Monero Explorer`}
               />
-              <meta name="application-name" content="XMRScan" />
-              <meta name="apple-mobile-web-app-title" content="XMRScan" />
+              <meta name="application-name" content="Monero Explorer" />
+              <meta name="apple-mobile-web-app-title" content="Monero Explorer" />
             </MetaTags>
             {!transaction.tx_hash && (
               <h1 className="Details-header-title">

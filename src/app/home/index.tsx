@@ -99,7 +99,7 @@ export class Home extends React.Component {
           <div className="New-User-CTA-text-wrapper">
             <h1 className="New-User-CTA-title">Monero (XMR) Block Explorer</h1>
             <p className="New-User-CTA-text">
-              Welcome to XMRScan, a completely free Monero block explorer. Enter your transaction
+              Welcome to Monero Explorer, a completely free Monero block explorer. Enter your transaction
               ID, or TXID in the search bar to locate your transaction in Monero blockchain.
             </p>
           </div>
@@ -108,26 +108,26 @@ export class Home extends React.Component {
         <MemPool />
         <Blocks />
         <MetaTags>
-          <title>Monero (XMR) Blockchain Explorer - XMRScan</title>
+          <title>Monero (XMR) Blockchain Explorer - Monero Explorer</title>
           <meta
             name="description"
-            content="XMRScan allows you to check XMR blocks and transactions with Monero blockchain explorer"
+            content="Monero Explorer allows you to check XMR blocks and transactions with Monero blockchain explorer"
           />
-          <meta property="og:title" content="Monero (XMR) Explorer - XMRScan" />
-          <meta name="og:title" content="Monero (XMR) Explorer - XMRScan" />
+          <meta property="og:title" content="Monero (XMR) Explorer - Monero Explorer" />
+          <meta name="og:title" content="Monero (XMR) Explorer - Monero Explorer" />
           <meta
             name="og:description"
-            content="XMRScan allows you to check XMR blocks and transactions with Monero blockchain explorer"
+            content="Monero Explorer allows you to check XMR blocks and transactions with Monero blockchain explorer"
           />
           <meta property="og:url" content="https://xmrscan.org/" />
           <meta property="og:type" content="website" />
           <meta
             name="twitter:description"
-            content="XMRScan allows you to check XMR blocks and transactions with Monero blockchain explorer"
+            content="Monero Explorer allows you to check XMR blocks and transactions with Monero blockchain explorer"
           />
-          <meta name="twitter:title" content="Monero (XMR) Explorer - XMRScan" />
-          <meta name="application-name" content="XMRScan" />
-          <meta name="apple-mobile-web-app-title" content="XMRScan" />
+          <meta name="twitter:title" content="Monero (XMR) Explorer - Monero Explorer" />
+          <meta name="application-name" content="Monero Explorer" />
+          <meta name="apple-mobile-web-app-title" content="Monero Explorer" />
           <script type="application/ld+json">{structuredJSON}</script>
         </MetaTags>
         <section className="promo">

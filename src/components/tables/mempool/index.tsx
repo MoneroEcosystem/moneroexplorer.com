@@ -95,26 +95,26 @@ class MemPoolClass extends React.Component<Props, State> {
     return (
       <div className={`MemPool card ${paginated && 'paginated'}`}>
         <MetaTags>
-          <title>Monero (XMR) Transaction Pool — XMRScan</title>
+          <title>Monero (XMR) Transaction Pool — Monero Explorer</title>
           <meta
             name="description"
-            content="Monero (XMR) Transaction Pool. Monero Block Frequency Tool - XMRScan"
+            content="Monero (XMR) Transaction Pool. Monero Block Frequency Tool - Monero Explorer"
           />
-          <meta property="og:title" content="Monero (XMR) Transaction Pool — XMRScan" />
-          <meta name="og:title" content="Monero (XMR) Transaction Pool — XMRScan" />
+          <meta property="og:title" content="Monero (XMR) Transaction Pool — Monero Explorer" />
+          <meta name="og:title" content="Monero (XMR) Transaction Pool — Monero Explorer" />
           <meta
             name="og:description"
-            content="Monero (XMR) Transaction Pool. Monero Block Frequency Tool - XMRScan"
+            content="Monero (XMR) Transaction Pool. Monero Block Frequency Tool - Monero Explorer"
           />
           <meta property="og:url" content="https://xmrscan.org/mempool" />
           <meta property="og:type" content="website" />
           <meta
             name="twitter:description"
-            content="Monero (XMR) Transaction Pool. Monero Block Frequency Tool - XMRScan"
+            content="Monero (XMR) Transaction Pool. Monero Block Frequency Tool - Monero Explorer"
           />
-          <meta name="twitter:title" content="Monero (XMR) Transaction Pool — XMRScan" />
-          <meta name="application-name" content="XMRScan" />
-          <meta name="apple-mobile-web-app-title" content="XMRScan" />
+          <meta name="twitter:title" content="Monero (XMR) Transaction Pool — Monero Explorer" />
+          <meta name="application-name" content="Monero Explorer" />
+          <meta name="apple-mobile-web-app-title" content="Monero Explorer" />
         </MetaTags>
         <div className="MemPool-header">
           <h1 className="MemPool-title">Monero Transaction Pool</h1>{' '}

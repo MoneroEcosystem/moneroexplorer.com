@@ -136,26 +136,26 @@ class BlocksClass extends React.Component<Props, State> {
     return (
       <div className="Blocks card">
         <MetaTags>
-          <title>Monero (XMR) Blocks - XMRScan</title>
+          <title>Monero (XMR) Blocks - Monero Explorer</title>
           <meta
             name="description"
-            content="Monero (XMR) Latest Blocks. Check Monero Blockchain Blocks - XMRScan"
+            content="Monero (XMR) Latest Blocks. Check Monero Blockchain Blocks - Monero Explorer"
           />
-          <meta property="og:title" content="Monero (XMR) Blocks - XMRScan" />
-          <meta name="og:title" content="Monero (XMR) Blocks - XMRScan" />
+          <meta property="og:title" content="Monero (XMR) Blocks - Monero Explorer" />
+          <meta name="og:title" content="Monero (XMR) Blocks - Monero Explorer" />
           <meta
             name="og:description"
-            content="Monero (XMR) Latest Blocks. Check Monero Blockchain Blocks - XMRScan"
+            content="Monero (XMR) Latest Blocks. Check Monero Blockchain Blocks - Monero Explorer"
           />
           <meta property="og:url" content="https://xmrscan.org/blocks" />
           <meta property="og:type" content="website" />
           <meta
             name="twitter:description"
-            content="Monero (XMR) Latest Blocks. Check Monero Blockchain Blocks - XMRScan"
+            content="Monero (XMR) Latest Blocks. Check Monero Blockchain Blocks - Monero Explorer"
           />
-          <meta name="twitter:title" content="Monero (XMR) Blocks - XMRScan" />
-          <meta name="application-name" content="XMRScan" />
-          <meta name="apple-mobile-web-app-title" content="XMRScan" />
+          <meta name="twitter:title" content="Monero (XMR) Blocks - Monero Explorer" />
+          <meta name="application-name" content="Monero Explorer" />
+          <meta name="apple-mobile-web-app-title" content="Monero Explorer" />
         </MetaTags>
         <div className="Blocks-header">
           <h1 className="Blocks-title">Monero Blocks</h1>

@@ -90,7 +90,9 @@
     "start": "webpack-dev-server --mode development --config ./webpack_config/webpack.dev.js",
     "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production --config webpack_config/webpack.prod.js -p",
     "prettier:diff": "prettier --write --config ./.prettierrc --list-different \"src/**/*.ts\" \"src/**/*.tsx\"",
-    "formatAll": "find ./src/ -name '*.ts*' | xargs prettier --write --config ./.prettierrc --config-precedence file-override"
+    "formatAll": "find ./src/ -name '*.ts*' | xargs prettier --write --config ./.prettierrc --config-precedence file-override",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
