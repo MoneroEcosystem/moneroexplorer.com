@@ -16,7 +16,7 @@ All of our work happens directly on [GitHub](https://github.com/MonerEcosystem/m
 Get source code and download dependencies:
 
 ```
-git clone https://github.com/MyCryptoHQ/MoneroVision.git
+git clone https://github.com/MoneroEcosystem/moneroexplorer.com.git
 cd MoneroExplorer
 npm i
 ```
